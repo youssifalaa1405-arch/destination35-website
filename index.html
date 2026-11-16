@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Destination 35 — Specialty Coffee</title>
+<meta name="description" content="Destination 35 is a Saudi specialty coffee brand from Qatif. Five branches in the Eastern Province and a first international branch in Chicago.">
+<meta name="theme-color" content="#141415">
+<meta property="og:title" content="Destination 35 — Specialty Coffee">
+<meta property="og:description" content="Serving you a moment you wouldn't forget.">
+<meta property="og:image" content="assets/img/cover-cups.webp">
+<link rel="icon" type="image/svg+xml" href="assets/logo/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Cascadia+Code:wght@400;600&family=Sacramento&family=Alexandria:wght@400;700;900&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="vendor/maplibre-gl.css">
+<link rel="stylesheet" href="css/main.css?v=8">
+</head>
+<body>
+<!-- ============ LOADING SCREEN ============ -->
+<div class="loader" id="loader" role="status" aria-label="Loading Destination 35">
+  <div class="loader__cols" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="loader__body" aria-hidden="true">
+    <p class="loader__row"><span data-i18n="load.a">Specialty coffee</span><span data-i18n="load.c">Qatif, Saudi Arabia</span></p>
+    <div class="loader__mid">
+      <div class="loader__cupwrap">
+        <span class="loader__glow"></span>
+        <svg class="loader__cup" viewBox="0 0 200 250">
+          <defs>
+            <clipPath id="ldClip"><path d="M55 72 H145 L134 200 Q133 210 123 210 H77 Q67 210 66 200 Z"/></clipPath>
+            <linearGradient id="ldCoffee" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9a6230"/><stop offset=".5" stop-color="#6e4020"/><stop offset="1" stop-color="#3f2412"/></linearGradient>
+            <linearGradient id="ldStream" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5a3318"/><stop offset=".5" stop-color="#a8703a"/><stop offset="1" stop-color="#5a3318"/></linearGradient>
+          </defs>
+          <g class="ld-steam" fill="none" stroke="#f3efe6" stroke-width="3" stroke-linecap="round">
+            <path d="M78 56 q-9 -11 0 -22 t0 -22"/><path d="M100 52 q-9 -12 0 -24 t0 -24"/><path d="M122 56 q-9 -11 0 -22 t0 -22"/>
+          </g>
+          <rect class="ld-stream" x="96.5" y="-10" width="7" height="222" rx="3.5" fill="url(#ldStream)"/>
+          <g clip-path="url(#ldClip)">
+            <rect x="40" y="60" width="120" height="160" fill="#f3efe6" opacity=".05"/>
+            <g id="ldLevel" transform="translate(0 212)">
+              <path class="ld-wave ld-wave--crema" d="M-200 -4 q25 -7 50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 V200 H-200 Z" fill="#e3bd80"/>
+              <path class="ld-wave" d="M-200 0 q25 6 50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 V200 H-200 Z" fill="url(#ldCoffee)"/>
+            </g>
+            <path d="M68 84 L76 196" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".16"/>
+          </g>
+          <path d="M55 72 H145 L134 200 Q133 210 123 210 H77 Q67 210 66 200 Z" fill="none" stroke="#f3efe6" stroke-width="3.5" stroke-linejoin="round"/>
+          <path d="M48 72 H152" stroke="#f3efe6" stroke-width="7" stroke-linecap="round"/>
+          <svg x="81" y="118" width="38" height="40" viewBox="239.78 175.77 137.88 145.38" fill="#f3efe6"><use href="#pin"/></svg>
+          <path d="M60 226 H140" stroke="#d9b52e" stroke-width="2.5" stroke-linecap="round" opacity=".7"/>
+        </svg>
+      </div>
+      <div class="loader__msg">
+        <p class="loader__msg-a"><span class="loader__brew"><span data-i18n="load.b">Brewing your coffee</span><em></em></span><span class="loader__pct"><b id="loaderPct">00</b></span></p>
+        <p class="loader__msg-b"><span data-i18n="load.d1">Your destination</span> <i data-i18n="load.d2">is here.</i></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a class="skip" href="#story" data-i18n="skip">Skip to content</a>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <a class="nav__brand" href="#top" aria-label="Destination 35">
+    <span class="nav__mark" id="navMark"><svg viewBox="239.78 175.77 137.88 145.38" aria-hidden="true"><use href="#pin"/></svg></span>
+    <span class="nav__word">DESTINATION<b>35</b></span>
+  </a>
+  <nav class="nav__links" aria-label="Main">
+    <a href="#story" data-i18n="nav.story">Story</a>
+    <a href="#locations" data-i18n="nav.locations">Locations</a>
+    <a href="#menu" data-i18n="nav.menu">Menu</a>
+    <a href="#visit" data-i18n="nav.visit">Visit</a>
+  </nav>
+  <div class="nav__end">
+    <button class="lang" id="langBtn" type="button" aria-label="Switch language"><span data-lang-label>العربية</span></button>
+    <a class="btn btn--gold btn--sm" href="#locations" data-i18n="nav.cta">Find a branch</a>
+  </div>
+</header>
+
+<!-- shared symbols -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <path id="pin" d="M 375.66 241.2 C 375.66 259.95 367.07 276.79 353.43 288.39 C 349.57 292.2 344.36 295.67 340.27 298.84 C 320.75 311.45 308.37 319.15 308.37 319.15 C 308.37 319.15 301.54 314.58 287.53 306.14 C 278.48 300.26 267.8 293.84 259.29 283.96 C 248.46 272.74 241.85 257.83 241.78 241.46 L 243.07 241.45 L 244.24 241.45 L 274.42 241.32 C 274.38 241.93 274.36 242.55 274.36 243.18 C 274.36 261.29 289.86 275.98 308.98 275.98 C 328.1 275.98 343.59 261.29 343.59 243.18 C 343.59 225.06 328.1 210.38 308.98 210.38 C 303.04 210.38 297.44 211.8 292.56 214.29 L 283.55 199.56 L 276.48 188.45 L 275.88 187.51 L 275.12 186.33 C 285 180.89 296.48 177.77 308.72 177.77 C 345.68 177.77 375.66 206.17 375.66 241.2"/>
+  </defs>
+</svg>
+
+<main>
+<!-- ============ HERO ============ -->
+<section class="hero" id="top" aria-label="Destination 35">
+  <div class="hero__pin">
+    <canvas class="hero__bg" id="heroBg" aria-hidden="true"></canvas>
+    <div class="hero__stripes" aria-hidden="true"></div>
+    <p class="hero__meta"><span data-i18n="hero.m1">Saudi Arabia</span><i></i><span class="script" data-i18n="hero.m2">Qatif</span><i></i><span data-i18n="hero.m3">Specialty coffee</span></p>
+    <h1 class="hero__title" id="heroTitle">
+      <span class="hl" style="--k:1"><span class="hl__a" data-i18n="hero.l1a">Serving</span><span class="hl__gap"></span><span class="hl__b" data-i18n="hero.l1b">you</span></span>
+      <span class="hl hl--script" style="--k:.97"><span class="hl__a" data-i18n="hero.l2a">a moment</span><span class="hl__gap"></span><span class="hl__b" data-i18n="hero.l2b">you</span></span>
+      <span class="hl" style="--k:.88"><span class="hl__a" data-i18n="hero.l3a">wouldn’t</span><span class="hl__gap"></span><span class="hl__b" data-i18n="hero.l3b">forget</span></span>
+    </h1>
+    <div class="beans" id="beans" aria-hidden="true"></div>
+    <div class="coin-stage" aria-hidden="true">
+      <div class="hero__glow" id="heroGlow"></div>
+      <div class="coin-shadow" id="coinShadow"></div>
+      <div class="cup-drop" id="cupDrop">
+        <div class="coin coin--cup" id="coin">
+          <img src="assets/img/m-cup.webp" alt="" width="713" height="981" fetchpriority="high">
+        </div>
+      </div>
+    </div>
+    <div class="hero__cta">
+      <a class="btn btn--gold" href="#menu" data-i18n="hero.cta1">See the menu</a>
+      <a class="btn btn--line" href="#locations" data-i18n="hero.cta2">Find a branch</a>
+    </div>
+    <p class="hero__hint"><span data-i18n="hero.hint">Scroll</span><i></i></p>
+  </div>
+</section>
+
+<!-- ============ STORY ============ -->
+<section class="story" id="story">
+  <div class="wrap story__grid">
+    <div class="story__text">
+      <p class="eyebrow" data-i18n="story.eyebrow">Who we are</p>
+      <h2 class="statement" id="statement" data-i18n="story.statement">Since 2019 we have been shaping an exceptional coffee experience, born from a passion for detail and quality.</h2>
+      <p class="lede" data-i18n="story.p1">Our journey began in the Eastern Province of Saudi Arabia, where we built our presence across five branches: two cafés, two drive-thrus and one in-house service branch, close to our guests wherever their day takes them.</p>
+      <p class="lede" data-i18n="story.p2">In 2026 we took a strategic step and opened our first international branch in Chicago, carrying the authentic Saudi coffee experience to the world.</p>
+    </div>
+    <div class="story__media">
+      <figure class="ph ph--tall" data-reveal><img src="assets/img/story-counter.webp" alt="Iced drinks lined up on the counter at Destination 35" loading="lazy" width="933" height="1400"></figure>
+      <figure class="ph ph--small" data-reveal data-par="-12"><img src="assets/img/story-hands.webp" alt="Two guests holding Destination 35 iced drinks" loading="lazy" width="933" height="1400"></figure>
+    </div>
+  </div>
+  <div class="wrap stats">
+    <div class="stat"><b data-count="2019" data-plain>2019</b><span data-i18n="stat.1">Founded in Qatif</span></div>
+    <div class="stat"><b data-count="5">5</b><span data-i18n="stat.2">Branches in the Eastern Province</span></div>
+    <div class="stat"><b data-count="2">2</b><span data-i18n="stat.3">Countries, Saudi Arabia and the USA</span></div>
+  </div>
+</section>
+
+<!-- ============ LOCATIONS / MAP ============ -->
+<section class="loc" id="locations" aria-label="Locations">
+  <div class="loc__pin">
+    <div class="loc__map" id="map" role="img" aria-label="Map of Destination 35 branches in Qatif"></div>
+    <div class="loc__shade" aria-hidden="true"></div>
+
+    <div class="loc__intro" id="locIntro">
+      <p class="eyebrow" data-i18n="loc.eyebrow">Where to find us</p>
+      <h2 class="loc__title"><span class="script" data-i18n="loc.t1">Five destinations in</span><span data-i18n="loc.t2">Qatif</span></h2>
+    </div>
+
+    <div class="loc__cards" id="locCards"></div>
+
+    <ol class="loc__dots" id="locDots" aria-label="Branches"></ol>
+    <p class="loc__coords" id="locCoords" aria-hidden="true"></p>
+  </div>
+</section>
+
+<!-- ============ SIGNATURE PRODUCTS (turntable) ============ -->
+<section class="sig" id="menu" aria-label="Signature products">
+  <div class="sig__pin">
+    <p class="sig__ghost" id="sigGhost" aria-hidden="true"></p>
+    <div class="sig__copy">
+      <p class="eyebrow" data-i18n="sig.eyebrow">Our signature products</p>
+      <p class="sig__num" id="sigNum"></p>
+      <h2 class="sig__name" id="sigName"></h2>
+      <p class="sig__cat" id="sigCat"></p>
+      <p class="sig__price"><b id="sigPrice"></b><span id="sigSar"></span></p>
+      <button class="btn btn--line btn--sm sig__see" id="sigSee" type="button"></button>
+    </div>
+    <div class="sig__stage"><div class="sig__wheel" id="sigWheel"></div></div>
+    <ol class="sig__ticks" id="sigTicks"></ol>
+    <ul class="sig__static" id="sigStatic"></ul>
+  </div>
+</section>
+
+<!-- ============ FULL MENU (branch, category, search) ============ -->
+<section class="fm" id="full-menu">
+  <div class="wrap">
+    <div class="fm__head">
+      <p class="eyebrow eyebrow--dark" data-i18n="fm.eyebrow">The full menu</p>
+      <h2 class="h2 h2--xl" data-i18n="fm.title">Everything we make.</h2>
+      <p class="lede lede--dark" data-i18n="fm.lede">Choose your branch, then a category. Prices are in Saudi riyals and differ from branch to branch.</p>
+    </div>
+    <div class="fm__bar">
+      <div class="fm__branches" id="fmBranches" role="tablist" aria-label="Branch"></div>
+      <label class="fm__search">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="fmSearch" type="search" autocomplete="off" spellcheck="false">
+      </label>
+    </div>
+    <div class="fm__body">
+      <aside class="fm__side">
+        <ul class="fm__cats" id="fmCats"></ul>
+        <p class="fm__count" id="fmCount"></p>
+      </aside>
+      <div class="fm__panel" id="fmPanel" aria-live="polite"></div>
+    </div>
+    <div class="fm__foot">
+      <a class="btn btn--dark" href="https://linktr.ee/destination.35" target="_blank" rel="noopener" data-i18n="fm.order">Order for pickup</a>
+      <a class="lnk lnk--dark" id="fmPdf" href="#" target="_blank" rel="noopener"></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WAYS TO VISIT ============ -->
+<section class="fr fr--paper" id="visit">
+  <div class="wrap">
+    <div class="fr__head">
+      <p class="eyebrow eyebrow--dark" data-i18n="vis.eyebrow">Ways to visit</p>
+      <h2 class="h2 h2--xl" data-i18n="vis.title">Your coffee, your way.</h2>
+      <p class="lede lede--dark" data-i18n="vis.lede">Sit down in one of our cafés, order from your car at a drive-thru, or pick up a cup on your way through the hospital.</p>
+    </div>
+
+    <div class="models">
+      <article class="model">
+        <figure class="ph"><img src="assets/img/int-4.webp" alt="Bright seating area inside a Destination 35 café" loading="lazy"></figure>
+        <div class="model__body">
+          <h3 data-i18n="vis.m1">Dine in</h3>
+          <p data-i18n="vis.m1p">Two cafés in Qatif to sit, meet and take your time.</p>
+          <ul class="model__list">
+            <li><button type="button" data-go="0" data-i18n="vis.b0">Al Quds Street</button></li>
+            <li><button type="button" data-go="1" data-i18n="vis.b1">Sea Front</button></li>
+          </ul>
+        </div>
+      </article>
+      <article class="model">
+        <figure class="ph"><img src="assets/img/type-drive.webp" alt="Destination 35 drive-thru kiosk at sunset" loading="lazy"></figure>
+        <div class="model__body">
+          <h3 data-i18n="vis.m2">Drive-thru</h3>
+          <p data-i18n="vis.m2p">Order from your car and keep moving.</p>
+          <ul class="model__list">
+            <li><button type="button" data-go="2" data-i18n="vis.b2">Al Shati</button></li>
+            <li><button type="button" data-go="3" data-i18n="vis.b3">Al Hadla</button></li>
+          </ul>
+        </div>
+      </article>
+      <article class="model">
+        <figure class="ph"><img src="assets/img/type-inhouse.webp" alt="Destination 35 service counter inside a building" loading="lazy"></figure>
+        <div class="model__body">
+          <h3 data-i18n="vis.m3">Grab and go</h3>
+          <p data-i18n="vis.m3p">A service counter inside the hospital, for staff and visitors.</p>
+          <ul class="model__list">
+            <li><button type="button" data-go="4" data-i18n="vis.b4">Qatif Central Hospital</button></li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT / FOOTER ============ -->
+<footer class="foot" id="contact">
+  <div class="foot__band" aria-hidden="true"></div>
+  <div class="wrap foot__top">
+    <h2 class="foot__title"><span data-i18n="foot.t1">Sip into</span> <span class="script" data-i18n="foot.t2">something</span> <span data-i18n="foot.t3">amazing.</span></h2>
+    <div class="foot__actions">
+      <a class="btn btn--gold" href="#locations" data-i18n="foot.cta1">Find your nearest branch</a>
+      <a class="btn btn--line" href="https://wa.me/966532772332" target="_blank" rel="noopener" data-i18n="foot.cta2">Message us on WhatsApp</a>
+    </div>
+  </div>
+  <div class="wrap foot__grid">
+    <div>
+      <h3 data-i18n="foot.h1">Contact</h3>
+      <a class="lnk" href="mailto:info@destination35.com">info@destination35.com</a>
+      <a class="lnk" href="tel:+966532772332" dir="ltr">+966 53 277 2332</a>
+    </div>
+    <div>
+      <h3 data-i18n="foot.h2">Saudi Arabia</h3>
+      <p data-i18n="foot.ksa">Five branches in Qatif, Eastern Province</p>
+      <a class="lnk" href="#locations" data-i18n="foot.see">See the map</a>
+    </div>
+    <div>
+      <h3 data-i18n="foot.h3">United States</h3>
+      <p data-i18n="foot.usa">W 103rd St, Palos Hills, Illinois</p>
+    </div>
+    <div>
+      <h3 data-i18n="foot.h4">Follow</h3>
+      <a class="lnk" href="https://www.instagram.com/destination35.ksa" target="_blank" rel="noopener">Instagram</a>
+      <a class="lnk" href="https://www.tiktok.com/@destination35.ksa" target="_blank" rel="noopener">TikTok</a>
+      <a class="lnk" href="https://x.com/35Destination" target="_blank" rel="noopener">X</a>
+      <a class="lnk" href="https://www.snapchat.com/add/destination35.ksa" target="_blank" rel="noopener">Snapchat</a>
+    </div>
+  </div>
+  <div class="wrap foot__base">
+    <img class="foot__logo" src="assets/logo/wordmark.svg" alt="Destination 35" loading="lazy">
+    <p>© 2026 Destination 35. <span data-i18n="foot.rights">All rights reserved.</span></p>
+    <p class="foot__credit">Map data © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>, <a href="https://openfreemap.org" target="_blank" rel="noopener">OpenFreeMap</a></p>
+  </div>
+  <div class="wrap foot__devrow">
+    <a class="foot__dev" href="https://mrics.art" target="_blank" rel="noopener" aria-label="Developed by MRICS, opens mrics.art"><span data-i18n="foot.dev">Developed by</span><img src="assets/logo/mrics-white.png" alt="MRICS" width="64" height="12" loading="lazy"></a>
+  </div>
+</footer>
+</main>
+
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/ScrollTrigger.min.js"></script>
+<script src="vendor/lenis.min.js"></script>
+<script src="vendor/maplibre-gl.js"></script>
+<script src="js/i18n.js?v=6"></script>
+<script src="js/menu.js?v=6"></script>
+<script src="js/map.js?v=6"></script>
+<script src="js/main.js?v=6"></script>
+</body>
+</html>
